@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eyal Ganor</title>
+    <style>
+        .textarea {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            color: blue;
+        }
+    </style>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+
+</head>
+
+<body>
+
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Your Email</label>
+            <input type="email" class="form-control" id="email" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="email-subject">Subject</label>
+            <input type="email" class="form-control" id="email-subject" aria-describedby="emailHelp"
+                placeholder="Enter subject">
+        </div>
+        <div class="form-group textarea">
+            <label for="email-body">Messege Body</label>
+            <textarea id="email-body" name="email-body" id="" cols="30" rows="10"
+                placeholder="write me a messege..."></textarea>
+        </div>
+        <div class="buttons">
+            <a type="button" class="btn btn-primary send-email" onlick="onSendEmail()">Send</a>
+            <a type="button" class="btn btn-primary goback">Go Back</a>
+        </div>
+    </form>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script>
+        $('.send-email').click(onSendEmail);
+        $('.goback').click(onGoBack);
+
+        function onSendEmail() {
+            console.log(123);
+            var email = $('.email').val()
+            var SUBJECT = $('#email-subject').val()
+            var BODY = $('#email-body').val()
+            console.log(SUBJECT, BODY);
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=eyalganor@gmail.com&su=${SUBJECT}&body=${BODY}`,
+                '_blank')
+                window.location.href = "index.html  ";
+
+            }
+        function onGoBack(){
+                window.location.href = "index.html  ";
+
+        }
+    </script>
+</body>

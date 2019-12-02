@@ -190,7 +190,7 @@ body {
 header.masthead {
     text-align: center;
     color: white;
-    background-image: url("../img/header-bg.jpg");
+    background-image: url("../img/header.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -343,7 +343,7 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 30px;
 }
 .portfolio-modal .modal-content img {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .portfolio-modal .modal-content button {
     cursor: pointer;
@@ -766,4 +766,17 @@ fieldset[disabled] .btn-xl:hover {
 .container {
     padding-right: 0;
     padding-left: 0;
+}
+.portfolio-content{
+    width:100%;
+}
+.modal-img{
+    width:15em;
+}
+#contact{
+    display:flex;
+    background-color: red;
+    z-index:111;
+    width:100%; 
+    font-size: .1em;
 }
