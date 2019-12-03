@@ -69,7 +69,7 @@ body {
     right: 3%;
     height: 50px;
     width: 50px;
-    background: #e2cb36;
+    background: #4398a365;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@ body {
 .offcanvas-aside {
     position: fixed;
     height: 100%;
-    background: red;
+    background: rgb(88, 87, 87);
     width: 80vw;
     right: -80vw;
     z-index: 10;
@@ -773,10 +773,18 @@ fieldset[disabled] .btn-xl:hover {
 .modal-img{
     width:15em;
 }
-#contact{
+.contact{
     display:flex;
-    background-color: red;
+    flex-direction: column;
+    color: rgb(212, 30, 106);
     z-index:111;
     width:100%; 
-    font-size: .1em;
+    font-size: 1em;
+    cursor:pointer;
+}
+.list-group-item:hover{
+    background-color: rgb(64, 159, 214);
+}
+*{
+    /* background-color: #111; bg-*/
 }
